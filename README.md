@@ -14,6 +14,18 @@ The training set contains 11,000 images of digitized stained biopsies. This is t
 In this competition, submisisons are scored based on the quadratic weighted kappa, which measures the agreement between two ISUP ratings - predicted vs. actual. A perfect score of 1 is graded when the both the predicted and actual ratings are the same.
 
 Assuming there are 10 diasnoses with the predicted and actual scores as follow:
+
 | ISUP grade - Predicted | ISUP grade - Actual |
 | ---------------------- | ------------------- |
 |           3            |          0          | 
+|           1            |          2          | 
+|           0            |          2          | 
+|           2            |          1          | 
+|           3            |          0          | 
+|           2            |          3          | 
+|           1            |          2          | 
+|           3            |          0          | 
+|           1            |          2          | 
+|           0            |          1          | 
+
+
