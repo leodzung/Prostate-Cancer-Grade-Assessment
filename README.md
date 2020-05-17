@@ -61,3 +61,5 @@ wi,j = (i−j)^2 / (N−1)^2
 
 4. Calculate expected value (outer product of the two histograms)
 
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
