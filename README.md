@@ -63,10 +63,10 @@ wi,j = (i−j)^2 / (N−1)^2
 
 |   Matrix  |   E  |   Matrix  |   E    |
 | --------- | ---- | --------- | ------ |
-|   0.00    | 0.11 |    0.44   |  1.00  |
-|   0.11    | 0.00 |    0.11   |  0.44  |
-|   0.44    | 0.11 |    0.00   |  0.11  |
-|   1.00    | 0.44 |    0.11   |  0.00  |
+|   0.60    | 0.90 |    0.60   |  0.90  |
+|   0.40    | 0.60 |    0.40   |  0.60  |
+|   0.80    | 1.20 |    0.80   |  1.20  |
+|   0.20    | 0.30 |    0.20   |  0.30  |
 
 5. Calculate element-wise prorduct of matrix W and matrix O (num), and element-wise product of matrix W and matrix E (den).
 Weighted Kappa = 1 - (num / den)
