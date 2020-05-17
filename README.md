@@ -30,7 +30,7 @@ Assuming there are 10 diasnoses with the predicted and actual scores as follow:
 
 To calculate the qwk score:
 
-1. Create the confusion matrix. The columns represent predicted scores while the rows represent actual scores. The value in the matrix is the count of the number of instances with the according combination of predicted and actual score. For example, there are 3 instances where the predicted score is 1, and the actual score is 2 (row 2, 7 and 9 in the table above). The diagonal indicates the number of cases where the prediction is exactly the same as actual.
+1. Create the confusion matrix O. The columns represent predicted scores while the rows represent actual scores. The value in the matrix is the count of the number of instances with the according combination of predicted and actual score. For example, there are 3 instances where the predicted score is 1, and the actual score is 2 (row 2, 7 and 9 in the table above). The diagonal indicates the number of cases where the prediction is exactly the same as actual. 
 
 |     | `0` | `1` | `2` | `3` |
 | --- | --- | --- | --- | --- |
@@ -39,7 +39,7 @@ To calculate the qwk score:
 | `2` |  1  |  3  |  0  |  0  |
 | `3` |  0  |  0  |  1  |  0  |
 
-2. Use the weighted matrix below. Predictions that are further away from actuals are penalized more harshly than the ones that are closer to actuals. For example, prediction of 4 will result in better score than prediction of 5 when the actual score is 3. This matrix is calculated based on the difference between actual and predicted rating scores, formular below with N = 4.
+2. Use the weighted matrix W below. Predictions that are further away from actuals are penalized more harshly than the ones that are closer to actuals. For example, prediction of 4 will result in better score than prediction of 5 when the actual score is 3. This matrix W is calculated based on the difference between actual and predicted rating scores, formular below with N = 4.
 
 wi,j = (i−j)^2 / (N−1)^2
 
@@ -59,7 +59,11 @@ wi,j = (i−j)^2 / (N−1)^2
 |     `2`   |     4    |      2    |
 |     `3`   |     1    |      3    | 
 
-4. Calculate expected value (outer product of the two histograms)
+4. Calculate expected value (outer product of the two histograms) - matrix E
 
 | Content Cell  | Content Cell  |
 | Content Cell  | Content Cell  |
+
+5. Calculate element-wise prorduct of matrix W and matrix O (num), and element-wise product of matrix W and matrix E (den).
+Weighted Kappa = 1 - (num / den)
+
