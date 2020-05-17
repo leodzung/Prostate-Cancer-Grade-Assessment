@@ -61,9 +61,19 @@ wi,j = (i−j)^2 / (N−1)^2
 
 4. Calculate expected value (outer product of the two histograms) - matrix E
 
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+|   Matrix  |   E  |   Matrix  |   E    |
+| --------- | ---- | --------- | ------ |
+|   0.00    | 0.11 |    0.44   |  1.00  |
+|   0.11    | 0.00 |    0.11   |  0.44  |
+|   0.44    | 0.11 |    0.00   |  0.11  |
+|   1.00    | 0.44 |    0.11   |  0.00  |
 
 5. Calculate element-wise prorduct of matrix W and matrix O (num), and element-wise product of matrix W and matrix E (den).
 Weighted Kappa = 1 - (num / den)
 
+|     |   `0`  |   `1`  |   `2`  |   `3`  |
+| --- | ------ | ------ | ------ | ------ |
+| `0` |  0.00  |  0.11  |  0.44  |  1.00  |
+| `1` |  0.11  |  0.00  |  0.11  |  0.44  |
+| `2` |  0.44  |  0.11  |  0.00  |  0.11  |
+| `3` |  1.00  |  0.44  |  0.11  |  0.00  |
