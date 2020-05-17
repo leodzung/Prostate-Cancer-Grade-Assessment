@@ -69,7 +69,7 @@ wi,j = (i−j)^2 / (N−1)^2
 |   0.20    | 0.30 |    0.20   |  0.30  |
 
 5. Calculate element-wise prorduct of matrix W and matrix O (num), and element-wise product of matrix W and matrix E (den).
-Weighted Kappa = 1 - (num / den)
+qwk = 1 - (num / den) = -0.5811 (negative means that this is worse than what can be expected by chance).
 
 |   Matrix  |    W   |    X   |    O   |
 | --------- | ------ | ------ | ------ |
