@@ -39,4 +39,12 @@ To calculate the qwk score:
 | `2` |  1  |  3  |  0  |  0  |
 | `3` |  0  |  0  |  1  |  0  |
 
-2
+2. Use the weighted matrix below. Predictions that are further away from actuals are penalized more harshly than the ones that are closer to actuals. For example, prediction of 4 will result in better score than prediction of 5 when the actual score is 3.
+
+|     |   `0`  |   `1`  |   `2`  |   `3`  |
+| --- | ------ | ------ | ------ | ------ |
+| `0` |  0.00  |  0.11  |  0.44  |  1.00  |
+| `1` |  0.11  |  0.00  |  0.11  |  0.44  |
+| `2` |  0.44  |  0.11  |  0.00  |  0.11  |
+| `3` |  1.00  |  0.44  |  0.11  |  0.00  |
+
