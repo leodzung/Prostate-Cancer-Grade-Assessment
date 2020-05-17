@@ -29,7 +29,8 @@ Assuming there are 10 diasnoses with the predicted and actual scores as follow:
 |           0            |          1          | 
 
 To calculate the qwk score:
-1. Create the confusion matrix
+
+1. Create the confusion matrix. The columns represent predicted scores while the rows represent actual scores. The value in the matrix is the count of the number of instances with the according combination of predicted and actual score. For example, there are 3 instances where the predicted score is 1, and the actual score is 2 (row 2, 7 and 9 in the table above). The diagonal indicates the number of cases where the prediction is exactly the same as actual.
 
 |     | `0` | `1` | `2` | `3` |
 | --- | --- | --- | --- | --- |
@@ -38,3 +39,4 @@ To calculate the qwk score:
 | `2` |  1  |  3  |  0  |  0  |
 | `3` |  0  |  0  |  1  |  0  |
 
+2
