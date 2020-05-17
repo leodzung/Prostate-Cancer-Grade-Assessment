@@ -52,7 +52,7 @@ wi,j = (i−j)^2 / (N−1)^2
 
 3. Caculate histograms of predicted and actual scores
 
-| Histogram of Actual  |   
+| Histogram | Actual   |   
 | -------------------- | 
 | `0` |      0.00      |
 | `1` |      0.11      |
