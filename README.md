@@ -32,6 +32,7 @@ To calculate the qwk score:
 1. Create the confusion matrix
 
 |     | `0` | `1` | `2` | `3` |
+| --- | --- | --- | --- | --- |
 | `0` |  0  |  0  |  0  |  0  |
 | `1` |  1  |  0  |  1  |  0  |
 | `2` |  1  |  3  |  0  |  0  |
