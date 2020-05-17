@@ -11,7 +11,7 @@ Above is an illustration of the Gleason grading process.
 The training set contains 11,000 images of digitized stained biopsies. This is the largest public whole-slide image dataset available. 
 
 ### Metric
-In this competition, submisisons are scored based on the quadratic weighted kappa, which measures the agreement between two ISUP ratings - predicted vs. actual. A perfect score of 1 is graded when the both the predicted and actual ratings are the same.
+In this competition, submisisons are scored based on the quadratic weighted kappa - qwk, which measures the agreement between two ISUP ratings - predicted vs. actual. A perfect score of 1 is graded when the both the predicted and actual ratings are the same.
 
 Assuming there are 10 diasnoses with the predicted and actual scores as follow:
 
@@ -28,4 +28,12 @@ Assuming there are 10 diasnoses with the predicted and actual scores as follow:
 |           1            |          2          | 
 |           0            |          1          | 
 
+To calculate the qwk score:
+1. Create the confusion matrix
+
+|     | `0` | `1` | `2` | `3` |
+| `0` |  0  |  0  |  0  |  0  |
+| `1` |  1  |  0  |  1  |  0  |
+| `2` |  1  |  3  |  0  |  0  |
+| `3` |  0  |  0  |  1  |  0  |
 
