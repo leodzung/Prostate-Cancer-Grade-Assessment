@@ -40,6 +40,7 @@ To calculate the qwk score:
 | `3` |  0  |  0  |  1  |  0  |
 
 2. Use the weighted matrix below. Predictions that are further away from actuals are penalized more harshly than the ones that are closer to actuals. For example, prediction of 4 will result in better score than prediction of 5 when the actual score is 3. This matrix is calculated based on the difference between actual and predicted rating scores, formular below with N = 4.
+
 wi,j = (i−j)^2 / (N−1)^2
 
 |     |   `0`  |   `1`  |   `2`  |   `3`  |
@@ -49,5 +50,14 @@ wi,j = (i−j)^2 / (N−1)^2
 | `2` |  0.44  |  0.11  |  0.00  |  0.11  |
 | `3` |  1.00  |  0.44  |  0.11  |  0.00  |
 
+3. Caculate histograms of predicted and actual scores
 
+| Histogram of Actual  |   
+| --- | -------------- | 
+| `0` |      0.00      |
+| `1` |      0.11      |
+| `2` |      0.44      |
+| `3` |      1.00      | 
+
+4. Calculate expected value (outer product of the two histograms)
 
