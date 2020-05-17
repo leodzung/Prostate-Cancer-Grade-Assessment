@@ -53,11 +53,11 @@ wi,j = (i−j)^2 / (N−1)^2
 3. Caculate histograms of predicted and actual scores
 
 | Histogram | Actual   |   
-| -------------------- | 
-| `0` |      0.00      |
-| `1` |      0.11      |
-| `2` |      0.44      |
-| `3` |      1.00      | 
+| ----------|--------- | 
+|     `0`   |   0.00   |
+|     `1`   |   0.11   |
+|     `2`   |   0.44   |
+|     `3`   |   1.00   | 
 
 4. Calculate expected value (outer product of the two histograms)
 
