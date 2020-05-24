@@ -84,3 +84,11 @@ qwk = 1 - (num / den) = -0.5811 (negative means that this is worse than what can
 |   0.04    |  0.00  |  0.04  |  0.27  |
 |   0.36    |  0.13  |  0.00  |  0.13  |
 |   0.00    |  0.13  |  0.02  |  0.00  |
+
+### Preprocessing
+
+One of the biggest challenges of this competition is that the imput images are of extremely high resolution and large areas of empty space. That calls for the need of an effective preprocessing to identify and focus on the interesting area. The straightforward approach of simply rescale the input images to square is not very efficient because the input images come with a wide range of sizes. Simply squared-shaped transform images became distorted and is not in a consistent manner. Moreover, the large blank areas in the images would consume GPU memory and processing power.
+
+I decided to use the approach of concatenate tiles of interest that is proposed here. This approach selects N=12 tiles from each image simply based on the number of tissue pixels.
+
+https://www.kaggle.com/iafoss/panda-concat-tile-pooling-starter-0-79-lb
